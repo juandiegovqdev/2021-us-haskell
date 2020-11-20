@@ -15,3 +15,4 @@
 # Documentación
 
 - Working with JSON data by using Aeson: https://livebook.manning.com/book/get-programming-with-haskell/chapter-40/
+- Parsing JSON with Aeson: https://www.schoolofhaskell.com/school/starting-with-haskell/libraries-and-frameworks/text-manipulation/json

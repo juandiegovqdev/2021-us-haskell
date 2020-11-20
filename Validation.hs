@@ -10,12 +10,14 @@ import GHC.Generics
 
 -- Insert here your own credentials
 
+{-
 myoauth :: OAuth
 myoauth =
   newOAuth { oauthServerName     = "api.twitter.com"
            , oauthConsumerKey    = "your consumer key here"
            , oauthConsumerSecret = "your consumer secret here"
              }
+-}
 
 mycred :: Credential
 mycred = newCredential "your access token here"
@@ -39,12 +41,15 @@ timeline :: String -- ^ Screen name of the user
                                        --   contains the error information.
 timeline name = do
   -- Firstly, we create a HTTP request with method GET (it is the default so we don't have to change that).
+
+  -- Here, we have to set our API Endpoint.
   req <- parseUrl $ "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" ++ name
   -- Using a HTTP manager, we authenticate the request and send it to get a response.
   res <- withManager $ \m -> do
            -- OAuth Authentication. 'signOAuth' modifies the HTTP header adding the
            -- appropriate authentication.
-           signedreq <- signOAuth myoauth mycred req
+           -- signedreq <- signOAuth myoauth mycred req
+           signedreq <- signOAuth mycred req
            -- Send request.
            httpLbs signedreq m
   -- Decode the response body.

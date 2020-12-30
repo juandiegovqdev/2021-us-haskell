@@ -4,6 +4,7 @@ import Data.Aeson
 import qualified Data.ByteString.Lazy as B
 import GHC.Generics
 
+-- data Cryptos = Cryptos [Crypto]
 data Crypto = Crypto { fifteenminutes :: Float
                                    , last :: Float
                                    , buy :: Float

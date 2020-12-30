@@ -9,6 +9,8 @@
 2. cabal install http-conduit
 3. cabal install control
 4. cabal install mtl
+5. cabal install HandsomeSoup
+6. cabal install hxt
 
 # API Endpoint
 

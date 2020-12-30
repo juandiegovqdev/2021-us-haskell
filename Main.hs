@@ -57,9 +57,15 @@ main = do
     
 -- message crypto = "\n The price of "++(show.name) crypto ++" is $"++ (show.buy) crypto ++ "\n"
 message stats = "\nTimestamp "++(show.timestamp) stats 
-                ++"Total BTC sent: $"++ (show.total_btc_sent) stats ++ "\n"
-                ++"Total BTC sent: $"++ (show.total_btc_sent) stats ++ "\n"
-                ++"Total BTC sent: $"++ (show.total_btc_sent) stats ++ "\n"
-                ++"Total BTC sent: $"++ (show.total_btc_sent) stats ++ "\n"
-                ++"Total BTC sent: $"++ (show.total_btc_sent) stats ++ "\n"
+                ++"Precio de mercado (USD): $"++ (show.market_price_usd) stats ++ "\n"
+                ++"Hash rate: "++ (show.hash_rate) stats ++ "\n"
+                ++"Comisiones totales (BTC): "++ (show.total_fees_btc) stats ++ "\n"
+                ++"Nº BTC minados: "++ (show.n_btc_mined) stats ++ "\n"
+                ++"Nº bloques minados: "++ (show.n_blocks_mined) stats ++ "\n"
+                ++"Nº total de bloques: "++ (show.n_blocks_total) stats ++ "\n"
+                ++"Volúmen estimado de transacciones (USD): $"++ (show.estimated_transaction_volume_usd) stats ++ "\n"
+                ++"Tamaño de bloques: "++ (show.blocks_size) stats ++ "\n"
+                ++"Ganancias de los mineros (USD): $"++ (show.miners_revenue_usd) stats ++ "\n"
+                ++"Ganancias de los mineros (BTC): "++ (show.miners_revenue_btc) stats ++ "\n"
+                ++"Total de Bitcoin enviado: "++ (show.total_btc_sent) stats ++ "\n"
 

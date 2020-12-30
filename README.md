@@ -1,16 +1,18 @@
 # Trabajo de la asignatura Programación Declarativa
 
-- API KEY: W8BiiuaQy3mvjrAGBb0eGKQT2o9echBU
-
-- API SECRET: 59BbspDu6mpDG1Gx
+- Cómo ejecutar el código:
+    - runhaskell Main.hs
 
 # Librerías usadas
 
-1. Aeson
+1. cabal install aeson
+2. cabal install http-conduit
+3. cabal install control
+4. cabal install mtl
 
 # API Endpoint
 
-1. Example: https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=W8BiiuaQy3mvjrAGBb0eGKQT2o9echBU&q=Biden&sort=newest&hl=false&page=0&facet_filter=false
+1. Example: https://blockchain.info/ticker
 
 # Documentación
 

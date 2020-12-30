@@ -1,11 +1,19 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE DeriveGeneric #-}
+
 import Data.Aeson
 import qualified Data.ByteString.Lazy as B
 import GHC.Generics
+import Network.HTTP
+import Network.URI (parseURI)
+import Text.XML.HXT.Core
+import Text.HandsomeSoup
+import Data.Maybe (fromJust)
 
 -- https://blockchain.info/tobtc?currency=USD&value=27500 // Obtener valor de BTC en CURRENCY
 -- https://api.blockchain.info/stats // BTC Stats
+
+let statsUri = fromUrl "https://api.blockchain.info/stats"
 
 data Stats = Stats { market_price_usd :: Float
     , timestamp :: Int
